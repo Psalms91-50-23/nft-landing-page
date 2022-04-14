@@ -83,7 +83,7 @@ const App = () =>  {
         <SectionWrapper 
           inScreen={inScreen3}
           title="Show casing my creativity"
-          description="The app has two screens, a search section and NFT details, while second shows more detailed of NFTS"
+          description="The App has two screens, a search section and section that shows more details of NFTS"
           notReverse
           mockupImg={assets.feature}
           banner="banner02"
@@ -92,9 +92,10 @@ const App = () =>  {
       <div className="app-download">
         <Download />
       </div>
-      <div className="px-4 py-2 justify-center items-center bgPrimaryPurple">
-        <p className={`${styles.pText} ${styles.whiteText}`}>Made by {" "}</p>
-        <span className={`bold ${styles.whiteText}`}>Kho</span>
+      <div className="flex flex-row px-4 py-2 justify-center items-center bgPrimaryPurple">
+        <p className={`${styles.pText} ${styles.whiteText}`}>
+          Made by {" "}<span className={`bold ${styles.whiteText}`}>{" "}Kho</span>
+        </p>
       </div>
     </div>
   );

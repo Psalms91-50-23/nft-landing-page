@@ -28,7 +28,7 @@ const Features = () => {
           >Technologies</h1>
         <p className={`${styles.pText} ${styles.whiteText}`}
           >
-            ProNef Has been developed using following technologies React-Native and cross-platform compatible</p>
+            ProNef Has been developed using following technologies React-Native and is cross-platform compatible</p>
       </div>
       <div className={`${styles.flexWrap}`}>
         <FeaturedCard 

@@ -21,7 +21,7 @@ const styles = {
   btnText: "text-white font-IBMPlex minmd:text-lg",
 
   btnPrimary:
-    "bg-primary mt-4 py-4 px-6 text-white text-lg minmd:text-2xl font-IBMPlex font-medium rounded-lg hover:shadow-2xl",
+    "bg-violet-600 mt-4 py-4 px-6 text-white text-lg minmd:text-2xl font-IBMPlex font-medium rounded-lg hover:shadow-2xl",
   btnBlack:
     "bg-black flex items-center py-2 px-4 rounded-md mt-2 w-fit cursor-pointer",
   btnIcon: "w-5 h-5 minmd:w-10 minmd:h-10 object-contain",

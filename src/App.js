@@ -11,7 +11,6 @@ const App = () =>  {
   const ref3 = useRef();
   const ref4 = useRef();
   const inScreen = true;
-  // const [inScreen, setInScreen] = useState(true)
   const [inScreen2, setInScreen2] = useState(false)
   const [inScreen3, setInScreen3] = useState(false)
   const [inScreen4, setInScreen4] = useState(false)
@@ -22,21 +21,18 @@ const App = () =>  {
   useEffect(() => { 
     if(inViewport2){
       setInScreen2(true)
-      // console.log('in viewport:', ref2.current);
     }
   },[inViewport2])
 
   useEffect(() => { 
     if(inViewport3){
       setInScreen3(true)
-      // console.log('in viewport:', ref3.current);
     }
   },[inViewport3])
 
   useEffect(() => { 
     if(inViewport4){
       setInScreen4(true)
-      // console.log('in viewport:', ref4.current);
     }
   },[inViewport4])
 
@@ -82,7 +78,7 @@ const App = () =>  {
       </div>
       <div
         ref={ref3}
-        className={`bgWhite`}
+        className={`show-case`}
         >
         <SectionWrapper 
           inScreen={inScreen3}

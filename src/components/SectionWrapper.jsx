@@ -20,7 +20,7 @@ const SectionWrapper = ({
         <div 
             className={`min-h-screen 
             ${styles.section}
-            ${reverse && !changeBgColor ? styles.bgWhite: reverse && changeBgColor ? " bgWhite" : "" } 
+            ${ (reverse && !changeBgColor) ? styles.bgWhite : (reverse && changeBgColor) ? " bgWhite" : "" } 
             ${banner}`
             }
             >
@@ -28,11 +28,11 @@ const SectionWrapper = ({
             ${reverse? styles.boxReverseClass : styles.boxClass} 
             w-11/12 sm:w-full minmd:w-3/4`}>
                 <div className={`${styles.descDiv}
-                    ${(reverse || changeBgColor) ?  " fadeRightMini" : " fadeLeftMini"}
-                    ${(reverse || changeBgColor) ? styles.textRight : styles.textLeft}
+                    ${((reverse && changeBgColor) || reverse) ?  " fadeRightMini" : " fadeLeftMini"}
+                    ${((reverse && changeBgColor) || reverse) ? styles.textRight : styles.textLeft}
                 `}>
                     <h1 className={`
-                    ${reverse || changeBgColor ? styles.blackText : styles.whiteText}
+                    ${((reverse && changeBgColor) || reverse) ? styles.blackText : styles.whiteText}
                     ${styles.h1Text}
                     `}>{title}</h1>
                     <p className={`${styles.descriptionText}`}>{description}</p>

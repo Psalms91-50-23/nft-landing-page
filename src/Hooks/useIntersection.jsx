@@ -6,17 +6,14 @@ const useIntersection = (element, rootMargin) => {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setState(entry.isIntersecting);
-                    //observe only once then remove
-                    observer.unobserve(element.current);
-                }
+                setState(entry.isIntersecting);
             }, { rootMargin }
         );
+
         element.current && observer.observe(element.current);
-    }, [rootMargin, element]);
+        return () => observer.unobserve(element.current);
+    }, []);
 
     return isVisible;
 };
-
 export default useIntersection

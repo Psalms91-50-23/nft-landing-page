@@ -4,7 +4,7 @@ const styles = {
 
   bgWhite: "bg-white",
   bgPrimary: "bg-primary",
-  bgPrimaryPurple: "rgba(126, 87, 194, 0.6)",
+  bgPrimaryPurple: "bg-purple-600",
 
   boxClass: "flex-row md:flex-col",
   boxReverseClass: "flex-row-reverse md:flex-col-reverse",
@@ -20,8 +20,9 @@ const styles = {
     "my-5 minmd:my-10 font-IBMPlex font-light text-xl minmd:text-3xl minlg:text-4xl minmd:leading-16",
   btnText: "text-white font-IBMPlex minmd:text-lg",
 
+  btnHover: "bg-violet-500 mt-4 py-4 px-6 text-white text-lg minmd:text-2xl font-IBMPlex font-medium rounded-lg hover:shadow-2xl",
   btnPrimary:
-    "bg-violet-600 mt-4 py-4 px-6 text-white text-lg minmd:text-2xl font-IBMPlex font-medium rounded-lg hover:shadow-2xl",
+    "bg-violet-600 mt-4 py-4 px-6 text-white text-lg minmd:text-2xl font-IBMPlex font-medium rounded-lg hover:shadow-2xl hover:bg-violet-500",
   btnBlack:
     "bg-black flex items-center py-2 px-4 rounded-md mt-2 w-fit cursor-pointer",
   btnIcon: "w-5 h-5 minmd:w-10 minmd:h-10 object-contain",

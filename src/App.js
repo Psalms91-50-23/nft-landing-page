@@ -7,20 +7,34 @@ import styles from "./styles/Global";
 
 const App = () =>  {
 
+  const ref = useRef();
   const ref2 = useRef();
   const ref3 = useRef();
   const ref4 = useRef();
-  const inScreen = true;
+  const [inScreen, setInScreen] = useState(false)
   const [inScreen2, setInScreen2] = useState(false)
   const [inScreen3, setInScreen3] = useState(false)
   const [inScreen4, setInScreen4] = useState(false)
+  const inViewport = useIntersection(ref, '0px');
   const inViewport2 = useIntersection(ref2, '-200px');
   const inViewport3 = useIntersection(ref3, '-200px');
   const inViewport4 = useIntersection(ref4, '-200px');
 
   useEffect(() => { 
+    if(inViewport){
+      setInScreen(true)
+    }
+    else{
+      setInScreen(false)
+    }
+  },[inViewport])
+
+  useEffect(() => { 
     if(inViewport2){
       setInScreen2(true)
+    }
+    else{
+      setInScreen2(false)
     }
   },[inViewport2])
 
@@ -28,18 +42,27 @@ const App = () =>  {
     if(inViewport3){
       setInScreen3(true)
     }
+    else{
+      setInScreen3(false)
+    }
   },[inViewport3])
 
   useEffect(() => { 
     if(inViewport4){
       setInScreen4(true)
     }
+    else{
+      setInScreen4(false)
+    }
   },[inViewport4])
 
 
   return (
     <div className="app-container">
-      <div className="app-entry">
+      <div 
+        className="app-entry"
+        ref={ref}
+        >
         <SectionWrapper 
           inScreen={inScreen}
           title="Your Own Store Of NFTS, Start Selling & Growing your Wealth Today"

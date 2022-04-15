@@ -107,7 +107,8 @@ const App = () =>  {
           inScreen={inScreen3}
           title="Show casing my creativity"
           description="The App has two screens, a search section and section that shows more details of NFTS"
-          notReverse
+          reverse
+          changeBgColor
           mockupImg={assets.feature}
           banner="banner02"
         />

@@ -11,7 +11,7 @@ const SectionWrapper = ({
     banner,
     reverse,
     inScreen,
-    notReverse
+    changeBgColor
 }) => {
 
   return (
@@ -20,7 +20,7 @@ const SectionWrapper = ({
         <div 
             className={`min-h-screen 
             ${styles.section}
-            ${reverse ? styles.bgWhite: notReverse ? " bgWhite" : "" } 
+            ${reverse && !changeBgColor ? styles.bgWhite: reverse && changeBgColor ? " bgWhite" : "" } 
             ${banner}`
             }
             >
@@ -28,11 +28,11 @@ const SectionWrapper = ({
             ${reverse? styles.boxReverseClass : styles.boxClass} 
             w-11/12 sm:w-full minmd:w-3/4`}>
                 <div className={`${styles.descDiv}
-                    ${reverse || notReverse?  " fadeRightMini" : " fadeLeftMini"}
-                    ${reverse || notReverse ? styles.textRight : styles.textLeft}
+                    ${(reverse || changeBgColor) ?  " fadeRightMini" : " fadeLeftMini"}
+                    ${(reverse || changeBgColor) ? styles.textRight : styles.textLeft}
                 `}>
                     <h1 className={`
-                    ${reverse || notReverse ? styles.blackText : styles.whiteText}
+                    ${reverse || changeBgColor ? styles.blackText : styles.whiteText}
                     ${styles.h1Text}
                     `}>{title}</h1>
                     <p className={`${styles.descriptionText}`}>{description}</p>
@@ -46,7 +46,7 @@ const SectionWrapper = ({
                 <div 
                     className={`flex-1 ${styles.flexCenter} p-8 sm:px-0`}>
                 <img 
-                    className={`${reverse ? " fadeLeftMini" : " fadeRightMini"} ${styles.sectionImg}`}
+                    className={`${(reverse || changeBgColor) ? " fadeLeftMini" : " fadeRightMini"} ${styles.sectionImg}`}
                     src={mockupImg} 
                     alt="mockup"
                 />

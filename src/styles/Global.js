@@ -31,7 +31,7 @@ const styles = {
   subSection: "flex items-center w-full minmd:w-3/4",
   descDiv: "flex-1 w-full flex justify-start flex-col md:mb-10 ",
 
-  flexCenter: "flex justify-center items-center",
+  flexCenter: "flex justify-center items-center py-16",
   flexWrap: "flex justify-center flex-wrap",
 
   fullImg: "w-full h-full object-cover",

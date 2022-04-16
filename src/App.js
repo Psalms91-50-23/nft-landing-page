@@ -88,7 +88,7 @@ const App = () =>  {
         <Features />
       </div>
       <div
-        className="deployment"
+        className="app-deployment"
         ref={ref4}
         >
         <SectionWrapper
@@ -101,7 +101,7 @@ const App = () =>  {
       </div>
       <div
         ref={ref3}
-        className={`show-case`}
+        className={`app-showCase`}
         >
         <SectionWrapper 
           inScreen={inScreen3}

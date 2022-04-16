@@ -13,13 +13,13 @@
   background-color: white;
 }
 
-.show-case {
+.app-showCase {
   width: 100%;
   height: 100%;
   background-color: white;
 }
 
-.app-entry, .app-ui, .deployment, .app-features, .app-download {
+.app-entry, .app-ui, .app-deployment, .app-features, .app-download {
   width: 100%;
   height: 100%;
 }

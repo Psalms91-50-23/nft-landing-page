@@ -46,7 +46,7 @@ const SectionWrapper = ({
                 <div 
                     className={`flex-1 ${styles.flexCenter} p-8 sm:px-0`}>
                 <img 
-                    className={`${(reverse || changeBgColor) ? " fadeLeftMini" : " fadeRightMini"} ${styles.sectionImg}`}
+                    className={`${(reverse || changeBgColor) ? " fadeLeftMini" : " fadeRightMini"} ${styles.sectionImg} img`}
                     src={mockupImg} 
                     alt="mockup"
                 />

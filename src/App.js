@@ -17,9 +17,9 @@ const App = () =>  {
   const [inScreen4, setInScreen4] = useState(false)
  
   const inViewport = useIntersection(ref, "0px");
-  const inViewport2 = useIntersection(ref2, "-300px");
-  const inViewport3 = useIntersection(ref3, "-300px");
-  const inViewport4 = useIntersection(ref4, "-300px");
+  const inViewport2 = useIntersection(ref2, "-50%");
+  const inViewport3 = useIntersection(ref3, "-50%");
+  const inViewport4 = useIntersection(ref4, "-50%");
 
   useEffect(() => { 
     if(inViewport){

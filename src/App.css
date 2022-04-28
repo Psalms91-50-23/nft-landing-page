@@ -44,3 +44,8 @@
 .horizontal-margin {
   margin: 0 10px;
 }
+
+.img {
+  width: 100vh;
+  height: 80vh;
+}
